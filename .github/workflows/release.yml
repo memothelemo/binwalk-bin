@@ -49,3 +49,4 @@ jobs:
           executable-name: binwalk
           target: ${{ matrix.platform.target }}
           release-tag-prefix: v
+          changes-file: "Changes.md"

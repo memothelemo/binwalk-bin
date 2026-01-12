@@ -43,10 +43,8 @@ jobs:
       - name: Build release
         run: cargo build --release --locked --verbose --target ${{ matrix.target }}
 
-      - name: Publish artifacts and release
-        uses: houseabsolute/actions-rust-release@v0
+      - name: Upload files to artifacts
+        uses: actions/upload-artifact@v4
         with:
-          executable-name: binwalk
-          target: ${{ matrix.platform.target }}
-          release-tag-prefix: v
-          changes-file: "Changes.md"
+          name: ${{ matrix.target }}
+          path: target/release/

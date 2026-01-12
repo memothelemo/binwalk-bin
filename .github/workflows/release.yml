@@ -32,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: 'https://github.com/ReFirmLabs/binwalk'
+          repository: 'ReFirmLabs/binwalk'
           submodules: true
 
       - name: Install Rust
